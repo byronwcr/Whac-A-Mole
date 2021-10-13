@@ -6,6 +6,8 @@ const button = document.querySelector('button');
 
 let result = 0;
 let currentTime = timeLeft.textContent;
+let timerId;
+let moleAppear;
 
 function randomSquare(){
     square.forEach(className => {
@@ -34,8 +36,7 @@ square.forEach(id =>{
 })
 
 function moveMole(){
-    let  moleAppear = null;
-    let timerId = setInterval(countDown,1000);
+    timerId = setInterval(countDown,1000);
     moleAppear = setInterval(randomSquare, (Math.random()*200 + 600 ));
 }
 
@@ -46,7 +47,7 @@ function countDown(){
     if(currentTime === 0){
         clearInterval(timerId);
         clearInterval(moleAppear);
-        alert('Game Over :(, your final score is ' + result);
+        alert('Game Over :(, your final score is ' + result + '. Refresh to start again.');
     }
 }
 //let timerId = setInterval(countDown,1000);
