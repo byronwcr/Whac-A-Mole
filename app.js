@@ -5,9 +5,12 @@ let score = document.querySelector('#score');
 const button = document.querySelector('button');
 
 let result = 0;
-let currentTime = timeLeft.textContent;
+let timeLimit = 5;
+let currentTime = timeLimit;
+timeLeft.textContent = timeLimit;
 let timerId;
 let moleAppear;
+
 
 function randomSquare(){
     square.forEach(className => {
@@ -37,7 +40,9 @@ square.forEach(id =>{
 
 function moveMole(){
     timerId = setInterval(countDown,1000);
+    console.log(timerId);
     moleAppear = setInterval(randomSquare, (Math.random()*200 + 600 ));
+    button.style.visibility = "hidden";
 }
 
 function countDown(){
@@ -48,6 +53,9 @@ function countDown(){
         clearInterval(timerId);
         clearInterval(moleAppear);
         alert('Game Over :(, your final score is ' + result + '. Refresh to start again.');
+        button.style.visibility = "visible";
+        timeLeft.textContent = timeLimit;
+        currentTime = timeLimit;
     }
 }
 //let timerId = setInterval(countDown,1000);
