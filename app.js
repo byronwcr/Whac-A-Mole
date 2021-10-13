@@ -5,7 +5,7 @@ let score = document.querySelector('#score');
 const button = document.querySelector('button');
 
 let result = 0;
-let timeLimit = 5;
+let timeLimit = 60;
 let currentTime = timeLimit;
 timeLeft.textContent = timeLimit;
 let timerId;
