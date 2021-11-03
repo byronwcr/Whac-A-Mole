@@ -60,6 +60,7 @@ function countDown(){
         score.textContent = result;
     }
 }
-//let timerId = setInterval(countDown,1000);
-//moveMole();
+
+// end
+
 
