@@ -57,7 +57,7 @@ function countDown(){
         timeLeft.textContent = timeLimit;
         currentTime = timeLimit;
         result = 0;
-        score.textcontent = result;
+        score.textContent = result;
     }
 }
 //let timerId = setInterval(countDown,1000);
