@@ -56,6 +56,8 @@ function countDown(){
         button.style.visibility = "visible";
         timeLeft.textContent = timeLimit;
         currentTime = timeLimit;
+        result = 0;
+        score.textcontent = result;
     }
 }
 //let timerId = setInterval(countDown,1000);
